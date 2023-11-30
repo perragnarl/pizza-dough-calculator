@@ -2,26 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+    .bg-pizza-1 {
+        @apply bg-cover bg-bottom bg-fixed bg-repeat bg-[linear-gradient(to_bottom,rgba(0,0,0,0.65),rgba(0,0,0,0.85)),url('/bg.jpg')] bg-blend-multiply;
+    }
+    .bg-pizza-2 {
+        @apply bg-cover bg-bottom bg-fixed bg-repeat bg-[linear-gradient(to_bottom,rgba(0,0,0,0.65),rgba(0,0,0,0.85)),url('/bg2.jpg')] bg-blend-multiply;
+    }
+    .bg-pizza-3 {
+        @apply bg-cover bg-bottom bg-fixed bg-repeat bg-[linear-gradient(to_bottom,rgba(0,0,0,0.65),rgba(0,0,0,0.85)),url('/bg3.jpg')] bg-blend-multiply;
+    }
+    .bg-pizza-4 {
+        @apply bg-cover bg-bottom bg-fixed bg-repeat bg-[linear-gradient(to_bottom,rgba(0,0,0,0.65),rgba(0,0,0,0.85)),url('/bg4.jpg')] bg-blend-multiply;
+    }
+    .bg-pizza-5 {
+        @apply bg-cover bg-bottom bg-fixed bg-repeat bg-[linear-gradient(to_bottom,rgba(0,0,0,0.65),rgba(0,0,0,0.85)),url('/bg5.jpg')] bg-blend-multiply;
+    }
 }
